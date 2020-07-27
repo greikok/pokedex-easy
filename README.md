@@ -1,2 +1,2 @@
 # pokedex-easy
-Un Pokedex Sencillo con Fetch y Async Await
+A Simple Pokedex with Fetch and Async Await
