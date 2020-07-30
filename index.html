@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Pokedex</title>
 </head>
 <body>
@@ -14,25 +14,7 @@
         </div>
         <input type="text" id="search" placeholder="Name or Id">
     </main>
-    <script>
-         async function getPokemon(id){
-            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-            const data = await response.json()
-            return data
-        }
-        async function init(){
-            const pokemon = await getPokemon(150)
-            updatePokemon(pokemon)
-        }
-        init()
-        function updatePokemon(pokemon){
-            window.pokemon.textContent = pokemon.name
-            window.image.setAttribute('src', pokemon.sprites.front_default)
-        }
-        window.search.addEventListener('change', async () =>{
-            const pokemon = await getPokemon(window.search.value)
-            updatePokemon(pokemon)
-        })
-    </script>
+<script src="./scripts/script.js">
+</script>
 </body>
 </html>
